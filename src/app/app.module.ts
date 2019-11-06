@@ -12,12 +12,22 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    IonicModule.forRoot({
+      rippleEffect: true,
+      mode: 'md'
+    }),
+  ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    {
+      provide: RouteReuseStrategy,
+      useClass: IonicRouteStrategy
+    }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

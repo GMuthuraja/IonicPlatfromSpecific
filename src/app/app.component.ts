@@ -23,5 +23,22 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+
+    this.platform.pause.subscribe(() => {
+      console.log("Paused");
+    });
+
+    this.platform.resume.subscribe(() => {
+      console.log("Resume");
+    });
+
+    //returns array of all possible results instead of exact device name
+    console.log(this.platform.platforms());
+    
+    //returns true if app in landscape orientation 
+    console.log(this.platform.isLandscape());
+
+    //returns true if app in portrait orientation
+    console.log(this.platform.isPortrait());
   }
 }
