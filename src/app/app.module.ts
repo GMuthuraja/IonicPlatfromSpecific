@@ -16,8 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     AppRoutingModule,
     IonicModule.forRoot({
-      rippleEffect: true,
-      mode: 'md'
+      rippleEffect: true
     }),
   ],
   providers: [
